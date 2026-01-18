@@ -1,0 +1,19 @@
+{% from "macros.html" import file_input %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload souboru</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>Nahrát soubor</h1>
+
+<form method="post" enctype="multipart/form-data">
+    {{ file_input("Vyber soubor", "file") }}
+    <button type="submit">Upload</button>
+</form>
+
+</body>
+</html>

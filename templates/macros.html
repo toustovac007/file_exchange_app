@@ -1,0 +1,12 @@
+{% macro file_input(label, name) %}
+<div class="form-group">
+    <label>{{ label }}</label>
+    <input
+        type="file"
+        name="{{ name }}"
+        required
+        class="form-control"
+        accept=".txt,.pdf,.png,.jpg,.jpeg"
+    >
+</div>
+{% endmacro %}
