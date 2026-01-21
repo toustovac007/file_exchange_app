@@ -10,6 +10,9 @@ app = Flask(__name__)
 UPLOAD_FOLDER = os.environ.get("UPLOAD_FOLDER", "/uploads")
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
+app.config["APPLICATION_ROOT"] = "/file_exchange"
+
+
 app.config['MAX_CONTENT_LENGTH'] = 5 * 1024 * 1024  # 5 MB
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv(
     "DATABASE_URL", "sqlite:///app.db"
