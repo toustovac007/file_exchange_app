@@ -34,10 +34,26 @@ main {
 
 footer {
     background-color: #333;
-    color: 333;
+    color: #fff;
     text-align: center;
-    padding: 1rem;
+    padding: 1.5rem;
     margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+footer a {
+    color: #4dabf7;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #74c0fc;
+    text-decoration: underline;
 }
 
 h1, h2 {
