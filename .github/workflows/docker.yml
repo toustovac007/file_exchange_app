@@ -96,7 +96,7 @@ jobs:
                     value: "production"
                   volumeMounts:
                   - name: uploads
-                    mountPath: /app/uploads
+                    mountPath: /uploads
                   resources:
                     requests:
                       memory: "128Mi"
