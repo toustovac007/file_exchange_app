@@ -1,13 +1,12 @@
 {% extends "base.html" %}
 {% from "macros.html" import file_input %}
 
-{% block title %}Upload File{% endblock %}
+{% block title %}Upload{% endblock %}
 
 {% block content %}
-<h1>Nahrát soubor</h1>
-
+<h2>Upload a File</h2>
 <form method="post" enctype="multipart/form-data">
-    {{ file_input("Vyber soubor", "file") }}
+    {{ file_input("Select a file", "file") }}
     <button type="submit">Upload</button>
 </form>
 {% endblock %}
