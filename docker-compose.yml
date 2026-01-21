@@ -4,6 +4,6 @@ services:
     ports:
       - "5000:5000"
     volumes:
-      - ./uploads:/app/uploads
-      - ./templates:/app/templates
-      - ./static:/app/static
+      - ./uploads:/uploads
+      - ./templates:/templates
+      - ./static:/static
