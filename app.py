@@ -10,6 +10,7 @@ app = Flask(__name__)
 UPLOAD_FOLDER = os.environ.get("UPLOAD_FOLDER", "/uploads")
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
+#tohle zatim nic moc nedela, ale nicemu to neskodi
 app.config["APPLICATION_ROOT"] = "/file_exchange"
 
 
