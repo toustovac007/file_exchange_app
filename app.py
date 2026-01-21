@@ -61,22 +61,22 @@ def upload():
     if request.method == 'POST':
         file = request.files.get('file')
 
-        # 1️⃣ kontrola, zda byl vybrán soubor
+        # 1️ kontrola, zda byl vybrán soubor
         if not file or file.filename == "":
             return "Nebyl vybrán žádný soubor", 400
 
-        # 2️⃣ kontrola přípony souboru
+        # 2️ kontrola přípony souboru
         if not allowed_file(file.filename):
             return "Nepovolená přípona souboru", 400
 
-        # 3️⃣ kontrola MIME typu
+        # 3️ kontrola MIME typu
         if file.mimetype not in ALLOWED_MIME_TYPES:
             return "Nepovolený MIME typ souboru", 400
 
-        # 4️⃣ bezpečný název souboru
+        # 4️ bezpečný název souboru
         filename = secure_filename(file.filename)
 
-        # 5️⃣ uložení souboru
+        # 5️ uložení souboru
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
 
